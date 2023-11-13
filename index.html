@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- COSTUM STYLE -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Vue js framework -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<body>
+
+    <div id="app">
+
+        <!-- PRIMA PARTE -->
+        <h1>ciao {{userColor}}</h1>
+        <img :src="imgSrc" alt="" :class="widthImg">
+
+        <br>
+        <br>
+        <!-- SECONDA PARTE -->
+
+        <label for="user-color">segli un colore</label>
+        <select name="colors" id="user-color" v-model="userColor">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+        </select>
+
+        <button @click="color" >mostra colore</button>
+
+        <div class="style_color" :class="bgColor"></div>
+
+        <!-- Vue.js -->
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
